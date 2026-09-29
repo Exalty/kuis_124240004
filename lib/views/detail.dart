@@ -12,8 +12,9 @@ class CarDetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFBFBFE),
       appBar: AppBar(
+        
         backgroundColor: const Color(0xFF2E7D32),
-        automaticallyImplyLeading: false, // Menghilangkan tombol kembali default di AppBar atas (Modul 4)
+        // automaticallyImplyLeading: false, // Menghilangkan tombol kembali default di AppBar atas (Modul 4)
         title: Text(
           car.name,
           style: const TextStyle(

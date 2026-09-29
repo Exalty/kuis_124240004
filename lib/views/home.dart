@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
 import '../models/car.dart';
 import '../data/car_data.dart';
 import 'detail.dart';
+import 'profile.dart';
 import 'login.dart';
 
 class HomePage extends StatelessWidget {
@@ -52,11 +52,22 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.white),
             tooltip: 'Logout',
-            onPressed: () {},
-            // onPressed: () => _confirmLogout(context),
+            onPressed: () => _confirmLogout(context),
+          ),
+          IconButton(
+            icon: const Icon(Icons.circle),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ProfilePage()
+                  )
+              );
+            }
           ),
         ],
       ),
+     
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: GridView.builder(

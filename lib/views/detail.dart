@@ -72,9 +72,9 @@ class CarDetailPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Judul Animal Details
+                  // Judul Car Details
                   const Text(
-                    'Animal Details:',
+                    'Car Details:',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -84,11 +84,20 @@ class CarDetailPage extends StatelessWidget {
                   const SizedBox(height: 12),
 
                   // Detail Height
-                  _buildDetailRow('Height', car.name),
+                  _buildDetailRow('name', car.name),
                   const SizedBox(height: 6),
 
                   // Detail Weight
-                  _buildDetailRow('Weight', car.brand),
+                  _buildDetailRow('brand', car.brand),
+                  const SizedBox(height: 6),
+
+                  _buildDetailRow('year', '${car.year}'),
+                  const SizedBox(height: 6),
+
+                  _buildDetailRow('price', '${car.price}'),
+                  const SizedBox(height: 6),
+
+                  _buildDetailRow('description', car.description),
                   const SizedBox(height: 6),
 
                   // Detail Type
@@ -101,15 +110,15 @@ class CarDetailPage extends StatelessWidget {
                   const SizedBox(height: 24),
 
                   // Judul car Activities
-                  const Text(
-                    'Animal Activites:',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
+                  // const Text(
+                  //   'C Activites:',
+                  //   style: TextStyle(
+                  //     fontSize: 16,
+                  //     fontWeight: FontWeight.bold,
+                  //     color: Colors.black87,
+                  //   ),
+                  // ),
+                  // const SizedBox(height: 12),
 
                   // List Badge Activities
                   // Wrap(
